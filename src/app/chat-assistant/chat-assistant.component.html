@@ -1,0 +1,45 @@
+<!-- <div class="chat-window">
+    <label for="questionSelect">Choose a question:</label>
+    <select id="questionSelect" [(ngModel)]="selectedQuestion" (change)="displayAnswer()">
+      <option *ngFor="let question of questions" [value]="question.text">{{ question.text }}</option>
+    </select>
+    
+    <div *ngIf="answer" class="bot">
+        <br>
+      {{ answer }}
+    </div>
+  </div>
+   -->
+
+   <!-- Chat Icon -->
+<!-- Chat Icon -->
+<!-- Chat Icon -->
+<!-- Chat Icon -->
+<button class="chat-icon" (click)="toggleChat()">
+    💬
+  </button>
+  
+  <!-- Chat Window -->
+  <div *ngIf="isChatOpen" class="chat-window">
+    <label for="questionSelect">Choose a question:</label>
+    <select id="questionSelect" [(ngModel)]="selectedQuestion" (change)="displayPredefinedAnswer()">
+      <option value="">-- Select a question --</option>
+      <option *ngFor="let question of questions" [value]="question.text">{{ question.text }}</option>
+    </select>
+  
+    <label for="customQuestion">Or type your question:</label>
+    <input
+      id="customQuestion"
+      type="text"
+      [(ngModel)]="userInput"
+      (keyup.enter)="sendMessage()"
+      placeholder="Type your message here"
+    />
+    <button (click)="sendMessage()">Send</button>
+  
+    <div *ngFor="let message of messages" [ngClass]="{'user-message': message.sender === 'user', 'bot-message': message.sender === 'bot'}">
+      {{ message.text }}
+    </div>
+  </div>
+  
+  

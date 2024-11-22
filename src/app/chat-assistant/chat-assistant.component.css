@@ -1,0 +1,109 @@
+/* .chat-window {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 300px;
+  height: 200px;
+ 
+}
+.user {
+  text-align: right;
+  color: blue;
+}
+.bot {
+  text-align: left;
+  color: green;
+} */
+/* Chat Icon Styling */
+/* Ensures the label is visible */
+/* Chat Icon Styling */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .chat-icon:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Chat Window Styling */
+  .chat-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  /* Label Styling */
+  label {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Styling for Dropdown, Input, and Button */
+  select,
+  input {
+    width: 100%;
+    padding: 10px; /* Increased padding for better touch targets */
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Consistent font size */
+  }
+  
+  /* Button Styling */
+  button {
+    width: 100%;
+    padding: 10px; /* Increased padding */
+    background-color: #007bff; /* Primary color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Message Styling */
+  .user-message {
+    text-align: right;
+    color: blue; /* User message color */
+    margin: 5px 0;
+  }
+  
+  .bot-message {
+    text-align: left;
+    color: green; /* Bot message color */
+    margin: 5px 0;
+    background-color: #f0f8ff; /* Light background for bot messages */
+    padding: 5px; /* Padding for messages */
+    border-radius: 4px; /* Rounded corners for messages */
+  }
+  

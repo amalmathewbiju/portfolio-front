@@ -1,0 +1,84 @@
+.contacts {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  width: 48%; /* Almost half of the row on larger screens */
+  height: 100px;
+  text-align: center;
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h3 {
+  font-size: 1.4rem;
+  color: #0073e6;
+  margin: 0;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contacts {
+    justify-content: center; /* Center cards on smaller screens */
+  }
+
+  .contact-card {
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Reduce font size for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 10px;
+    font-size: 0.9rem; /* Smaller font size for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+}

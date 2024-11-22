@@ -1,0 +1,35 @@
+<header class="header">
+  <!-- Wrapper for logo and menu -->
+  <div class="menu-wrapper">
+    <!-- Button with image as logo triggering the mat-menu -->
+    <button mat-button [matMenuTriggerFor]="menu" class="logo">
+      <img src="assets/images/amal.jpg" alt="home">
+    </button>
+
+    <button id="theme-toggle-button" (click)="toggleTheme()">
+      <mat-icon>brightness_6</mat-icon>
+      <mat-icon>arrow_right_alt</mat-icon>
+      <mat-icon>brightness_2</mat-icon>
+    </button>
+  </div>
+  
+  <!-- Dropdown Menu for Home, About, etc. -->
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/home">Home</button>
+    <button mat-menu-item routerLink="/about">About Me</button>
+    <button mat-menu-item routerLink="/projects">Projects</button>
+    <button mat-menu-item routerLink="/contacts">Contact</button>
+    <button mat-menu-item routerLink="/admin/login">Admin</button>
+  </mat-menu>
+
+  <!-- Navigation Links -->
+  <nav class="navbar">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/about">About Me</a>
+    <a routerLink="/projects">Projects</a>
+    <a routerLink="/contacts">Contact</a>
+    <a class="logo"> 
+      <img src="assets/images/amal.jpg" alt="home" routerLink="/admin/login">
+    </a>
+  </nav>
+</header>

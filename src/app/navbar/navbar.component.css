@@ -1,0 +1,91 @@
+.header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adds space between logo and bulb */
+}
+
+.logo img {
+  border-radius: 60%;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border: 1px solid black;
+  transition: width 0.3s, height 0.3s;
+}
+
+.logo:hover img {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar {
+  padding-right: 30px;
+}
+
+.navbar a {
+  font-size: 1.8rem;
+  margin-left: 3rem;
+  font-weight: 500;
+  transition: 0.5s ease;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:active {
+  color: rgb(255, 43, 43);
+  border-bottom: 3px solid red;
+}
+
+#theme-toggle-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: inherit;
+  border: none;
+  transition: color 0.3s;
+}
+
+
+
+
+@media (max-width: 995px) {
+  .navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid red;
+    border-bottom: 3px solid red;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+    display: none;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+
+  .navbar a:hover, .navbar a:active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid red;
+  }
+}

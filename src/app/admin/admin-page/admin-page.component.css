@@ -1,0 +1,55 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main Container */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form Fields */
+mat-form-field {
+  width: 100%;
+}
+
+/* Button Container */
+.button {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  margin-top: 10px;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 600px) {
+  .main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* Align forms in a grid */
+  form {
+    flex: 1 1 300px; /* Flex-grow, flex-shrink, flex-basis */
+    min-width: 300px; /* Prevent forms from being too narrow */
+  }
+
+  /* Button Centering */
+  .button {
+    justify-content: center; /* Center buttons on larger screens */
+  }
+}
+
+@media (max-width: 599px) {
+  h1 {
+    font-size: 1.5em; /* Smaller header font size */
+  }
+
+  /* Stack forms vertically */
+  form {
+    width: 100%;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  
+  "profile": {
+    "name": "Amal Mathew Biju",
+    "title": "MEAN STACK DEVELOPER",
+    "bio": "Enthusiastic graduate seeking to start a career as an entry-level software engineer with a reputed firm driven by technology. Proficient in C, HTML, CSS, and Python. Passionate about implementing and launching new projects.",
+    "education": "Bachelor of Technology: Computer Science and Engineering, St Thomas College of Engineering and Technology - Chengannur",
+    "profileImage": "path/to/profileImage.jpg"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Houseboat Booking Website",
+      "description": "Built an application program to reduce the manual work for managing travel, tour and customer using HTML, CSS, JavaScript, PHP, Apache, MySQL. The application provides flexibility to users, automated confirmation, availability calendar display and real-time confirmation."
+    },
+    {
+      "id": 2,
+      "title": "Placement Managing Software",
+      "description": "Built a Desktop application for managing placement activities in the college using HTML, CSS, JavaScript, and Python. The application aims to develop individual skills and to pass information about the upcoming placements in the college."
+    }
+  ],
+  "contacts": {
+    "email": "amal@example.com",
+    "phone": "123-456-7890",
+    "address": "Your Address"
+  }
+}

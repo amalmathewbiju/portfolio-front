@@ -1,0 +1,95 @@
+<!-- <div class="main2">
+    <div class="section1">
+      <div class="me">
+        <div class="bio">Enthusiastic graduate seeking to start a career as an entry-level software engineer with a reputed firm driven by technology. 
+          Proficient in C, HTML, CSS, and Python. Passionate about implementing and launching new projects.<br>
+          EDUCATION<br>
+          Bachelor of Technology: Computer Science and Engineering<br>
+          St Thomas College of Engineering and Technology - Chengannur</div>
+        <h1>Hello, it's Me</h1>
+        <h2> Amal Mathew Biju</h2>
+        <h1 class="pid">And I'm a MEAN STACK DEVELOPER</h1>
+      </div>
+    </div>
+     -->
+     <!-- <div class="main2" *ngIf="profile">
+      <div class="section1">
+        <div class="me">
+          <div class="bio">{{ profile.bio }}<br>
+            EDUCATION<br>
+            {{ profile.education }}
+          </div>
+          <h1>Hello, it's Me</h1>
+          <h2>{{ profile.name }}</h2>
+          <h1 class="pid">And I'm a {{ profile.title }}</h1>
+        </div>
+      </div>
+    </div> --> 
+   <div class="all">
+    <section class="about" id="about"> <br>
+      <h2 class="heading">About <span>Me</span></h2>
+      <div class="about-content">
+        <h3>{{profile.title}}</h3>
+        <p>{{profile.bio}}</p>
+      </div>
+       </section>
+  
+     <section class="education" id="education">
+      <h2 class="heading">My <span>Journey</span></h2><br>
+      <div class="education-row">
+        <div class="education-column">
+          <h1 class="title">Education</h1>
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content" *ngFor="let edu of education">
+                
+                <h3>Qualification : {{ edu.course }} at {{ edu.place }}</h3>
+                <p>{{ edu.description }}</p>
+                <div class="year"><mat-icon class="year">calendar_today</mat-icon> {{ edu.year }} </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="education-column">
+          <h1 class="title">Experience</h1>
+          <div class="education-box">
+            <div class="education-content">
+              <div class="content" *ngFor="let exp of experience">
+                <h3>Role : {{ exp.role }}</h3>
+                <h3>Company : {{ exp.company }}</h3>
+                <p>{{ exp.description }}</p>
+                <div class="year"><mat-icon class="year">calendar_today</mat-icon> {{ exp.duration }} </div>
+                <!-- <div class="date" ><mat-icon class="year">calendar_today</mat-icon> {{ exp.year }} </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div>
+     </section>
+     <section class="skills" id="skills">
+      <h2 class="heading">My <span>Skills</span></h2>
+      <div class="skills-row">
+        <div class="skills-column">
+          <h2 class="title">Technical Skills</h2>
+          <div class="skills-box">
+            <div class="skills-content">
+              <div class="progress" *ngFor="let s of profile.technicalskill">
+                <h3>{{ s.skill }}<mat-progress-bar mode="determinate" [value]="s.percentage"></mat-progress-bar><span> {{ s.percentage }}%</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   </div>
+  <!-- resume.component.html -->
+<!-- resume.component.html -->
+<!-- <h2>My Resume</h2>
+<iframe src="assets/resume.pdf" width="100%" height="600px"></iframe> -->
+
+
+<h2>My Resume</h2>
+<embed src="assets/resume.pdf" type="application/pdf" width="100%" height="600px" />

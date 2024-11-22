@@ -1,0 +1,155 @@
+/* .mainitem{
+    width: 100%;
+    margin-top: 100px;
+    color: rgba(25, 23, 23, 0.808);
+    font-size: 4rem;
+}
+.bodyitems{
+    justify-content: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(25, 23, 23, 0.808);
+    width: 100%;
+    height: 100%;
+    margin: 50px 0 0 40%;
+}
+.mainitem1{
+    font-family: monospace;
+    font-size: 2rem;
+    margin-left: 30%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.and{
+    margin-left: 45%;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.mainitem2{
+    font-family: monospace;
+    font-size: 2rem;
+    margin-left: 40%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.mainitem :hover{
+    
+    transition: 0.7s;
+   color: blueviolet;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family : 'Poppins' , sans-serif
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    
+}
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+  
+}
+.home .home-content{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    color: red;
+}
+.home-content h3{
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+}
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: relative;
+    width: 26vw;
+    border-radius: 30%;
+    box-shadow: 20px 10px 25px solid red;
+    cursor:pointer;
+    transition:0.2s linear;
+    border: 2px solid black;
+}
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.typing-text span{
+    position: relative;
+}
+.typing-text span::before{
+    content: "Mean Stack Developer";
+    animation: words 6s infinite;
+}
+.typing-text span ::after{
+    content: "";
+   
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.3s infinite;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+
+@keyframes words{
+    0% ,20%{
+content: "Mern Stack developer";
+    }
+    21%,40%{
+        content: "Full Stack Developer";
+    }
+}
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h3 {
+        font-size: 2.3rem;
+       
+    }
+    .home-content h1 h4{
+        font-size: 3.5rem;
+        line-height: 1;
+    }
+    .home-img img{
+        width: 70vh;
+        margin-top: 4rem;
+    }
+}

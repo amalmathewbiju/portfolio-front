@@ -1,0 +1,193 @@
+.all {
+  max-width: 90%;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+/* About Section */
+.about {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6rem;
+  gap: 2rem;
+}
+
+.about .heading, .heading {
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+span {
+  color: red;
+}
+
+.about-content {
+  text-align: center;
+  max-width: 90%;
+}
+
+.about-content h3 {
+  font-size: 2.2rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Education Section */
+.education {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+
+.education .heading {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.education .education-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.education-row .education-column {
+  flex: 1 1 45%;
+}
+
+.education-column .title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.education-column .education-box {
+  border-left: .3rem solid red;
+  padding-left: 1rem;
+}
+
+.education-box .education-content {
+  padding: 1.5rem;
+}
+
+.education-content .content {
+  padding: 1rem;
+  border: .2rem solid red;
+  border-radius: .6rem;
+  margin-bottom: 1.5rem;
+  
+}
+
+.education-content .content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-content .content p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.year {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  
+}
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.skills .heading {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-row .skills-column {
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.skills-column .title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skills-box .skills-content {
+  padding: 1rem;
+}
+
+.skills-content .progress {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.progress h3 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+mat-progress-bar {
+  height: 10px;
+  margin-left: 10px;
+  width: 60%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about .heading, .heading, .education .heading, .skills .heading {
+    font-size: 3rem;
+  }
+  
+  .about-content h3, .education-content .content h3, .skills-column .title {
+    font-size: 1.8rem;
+  }
+
+  .about-content p, .education-content .content p, .skills-content .progress {
+    font-size: 1.4rem;
+  }
+
+  .education-row .education-column {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .about .heading, .heading, .education .heading, .skills .heading {
+    font-size: 2.5rem;
+  }
+
+  .about-content h3, .education-content .content h3, .skills-column .title {
+    font-size: 1.6rem;
+  }
+
+  .about-content p, .education-content .content p, .skills-content .progress {
+    font-size: 1.2rem;
+  }
+
+  .all {
+    padding: 0 1rem;
+  }
+
+  mat-progress-bar {
+    width: 100%;
+  }
+}

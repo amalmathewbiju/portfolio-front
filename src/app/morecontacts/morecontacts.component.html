@@ -1,0 +1,11 @@
+<div class="contacts">
+    <h2>More way to Contact Me..</h2>
+    <div class="contact-card" *ngFor="let mcontact of mcontacts" 
+         (click)="redirectTo(mcontact)">
+      <div class="contact-info">
+        <img [src]="mcontact.image" alt="{{mcontact.name}}">
+      </div>
+     
+    </div>
+    
+  </div>

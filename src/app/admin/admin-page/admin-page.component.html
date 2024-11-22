@@ -1,0 +1,211 @@
+<h1>Welcome to Admin Page</h1>
+<div class="main">
+  
+  <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+    <div class="about-content">
+      <h1>Edit Profile</h1>
+  
+      <!-- Profile Fields (Name, Title, Bio) -->
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" aria-label="Name">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title" aria-label="Title">
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Bio</mat-label>
+        <textarea matInput formControlName="bio" aria-label="Bio"></textarea>
+      </mat-form-field>
+    </div>
+    
+    <!-- Submit Button -->
+    <div class="button">
+      <button mat-flat-button type="submit" [disabled]="profileForm.invalid">Update Profile</button>
+    </div>
+  </form>
+
+  <br>
+
+  <!-- Add New Project Form -->
+  <form [formGroup]="projectsForm" (ngSubmit)="selectedProjectId ? updateProject() : addProject()" class="project">
+    <div class="about-content">
+        <h1>Project Page Edit</h1>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="title" aria-label="Project Name">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput placeholder="Product Description" formControlName="description" required aria-label="Project Description"></textarea>
+          </mat-form-field>
+    </div>
+    
+    <div class="button">
+      <button mat-flat-button type="submit">{{ selectedProjectId ? 'Update Project' : 'Add Project' }}</button>
+    </div>
+  </form>
+
+  <br>
+
+  <!-- Add New Contact Form -->
+  <form [formGroup]="contactsForm" (ngSubmit)="selectedContactId ? updateContact() : addContact()" class="contact">
+    <div class="about-content">
+      <h1>Contact Page Edit</h1>
+      
+      <mat-form-field>
+        <mat-label>Contact Type</mat-label>
+        <input matInput formControlName="type" aria-label="Contact Type">
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <mat-label>Value</mat-label>
+        <textarea matInput placeholder="Contact field" formControlName="value" required aria-label="Contact Value"></textarea>
+      </mat-form-field>
+  
+      <!-- New Link Input Field -->
+      <mat-form-field class="example-full-width">
+        <mat-label>Link</mat-label>
+        <input matInput formControlName="link" placeholder="Enter contact link" aria-label="Contact Link">
+      </mat-form-field>
+    </div>
+  
+    <div class="button">
+      <button mat-flat-button type="submit">{{ selectedContactId ? 'Update Contact' : 'Add Contact' }}</button>
+    </div>
+  </form><br>
+  <form [formGroup]="mcontactsForm" (ngSubmit)="selectedMContactId ? updateMContact() : addMContact()" class="contact">
+    <div class="about-content">
+      <h1>Social Media Pages</h1>
+      
+      <mat-form-field>
+        <mat-label>Image</mat-label>
+        <input matInput formControlName="image" aria-label="Contact Type">
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <textarea matInput placeholder="Contact field" formControlName="name" required aria-label="Contact Value"></textarea>
+      </mat-form-field>
+  
+      <!-- New Link Input Field -->
+      <mat-form-field class="example-full-width">
+        <mat-label>Link</mat-label>
+        <input matInput formControlName="link" placeholder="Enter contact link" aria-label="Contact Link">
+      </mat-form-field>
+    </div>
+  
+    <div class="button">
+      <button mat-flat-button type="submit">{{ selectedMContactId ? 'Update Contact' : 'Add Contact' }}</button>
+    </div>
+  </form>
+
+</div>
+
+<div class="main">
+  <div class="project-edit">
+    <h2>Existing Projects</h2>
+    <div *ngFor="let project of projects">
+      <h3>{{ project.title }}</h3>
+      <button (click)="editProject(project)" mat-flat-button>Edit</button>
+      <button (click)="deleteProject(project._id)" mat-flat-button>Delete</button>
+    </div>
+  </div>
+  
+  <div class="contact-edit">
+    <h2>Existing Contacts</h2>
+    <div *ngFor="let contact of contacts">
+      <h3>{{ contact.type }}</h3>
+      <button (click)="editContact(contact)" mat-flat-button>Edit</button>
+      <button (click)="deleteContact(contact._id)" mat-flat-button>Delete</button>
+    </div>
+  </div>
+  <div class="contact-edit">
+    <h2>Existing Social</h2>
+    <div *ngFor="let mcontact of mcontacts">
+      <h3>{{ mcontact.name }}</h3>
+      <button (click)="editMContact(mcontact)" mat-flat-button>Edit</button>
+      <button (click)="deleteMContact(mcontact._id)" mat-flat-button>Delete</button>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<h1>Experience Page Edit</h1>
+<br>
+
+<!-- Form for Adding/Editing Experience -->
+<form [formGroup]="experienceForm" (ngSubmit)="selectedExperienceId ? updateExperience() : addExperience()" class="experience">
+  <mat-form-field>
+    <mat-label>Role</mat-label>
+    <input matInput formControlName="role" aria-label="Role">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Year</mat-label>
+    <input matInput formControlName="duration" aria-label="Year">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Place</mat-label>
+    <input matInput formControlName="company" aria-label="Company">
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput placeholder="Description" formControlName="description" required aria-label="Experience Description"></textarea>
+  </mat-form-field>
+
+  <div class="button">
+    <button mat-flat-button type="submit">{{ selectedExperienceId ? 'Update Experience' : 'Add Experience' }}</button>
+  </div>
+</form>
+
+<!-- List of Experiences -->
+<div *ngFor="let experience of experience">
+  <h3>{{ experience.role }}</h3>
+  <button (click)="editExperience(experience)" mat-flat-button>Edit</button>
+  <button (click)="deleteExp(experience._id)" mat-flat-button>Delete</button>
+  <br>
+</div>
+
+<br>
+
+<form [formGroup]="educationForm" (ngSubmit)="selectedEducationId ? updateEducation() : addEducation()" class="experience">
+  <mat-form-field>
+    <mat-label>Course</mat-label>
+    <input matInput formControlName="course" aria-label="Course">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Year</mat-label>
+    <input matInput formControlName="duration" aria-label="Education Year">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Place</mat-label>
+    <input matInput formControlName="place" aria-label="Education Place">
+  </mat-form-field>
+  
+  <mat-form-field class="example-full-width">
+    <mat-label>Description</mat-label>
+    <textarea matInput placeholder="Description" formControlName="description" required aria-label="Education Description"></textarea>
+  </mat-form-field>
+
+  <div class="button">
+    <button mat-flat-button type="submit">{{ selectedEducationId ? 'Update Education' : 'Add Education' }}</button>
+  </div>
+</form>
+
+<!-- List of Education -->
+<div *ngFor="let education of education">
+  <h3>{{ education.course }}</h3>
+  <button (click)="editEducation(education)" mat-flat-button>Edit</button>
+  <button (click)="deleteEdu(education._id)" mat-flat-button>Delete</button>
+</div>
+
+<button (click)="logout()" mat-flat-button>Logout</button>

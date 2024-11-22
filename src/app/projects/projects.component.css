@@ -1,0 +1,53 @@
+.section2 {
+  padding: 20px;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pro {
+  border: 1px solid rgb(255, 254, 254);
+  padding: 20px;
+  width: 30%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Scale effect on the hovered project */
+.pro:hover {
+  transform: scale(1.24);
+  filter: none;
+}
+
+/* Apply blur to non-hovered projects */
+.projects-container:hover .pro:not(:hover) {
+  filter: blur(3px); /* Blur only the projects that are not hovered */
+}
+
+/* Responsive Media Queries */
+
+/* For tablets and smaller screens (768px and below) */
+@media (max-width: 768px) {
+  .pro {
+    width: 45%; /* Two items per row */
+  }
+}
+
+/* For mobile screens (480px and below) */
+@media (max-width: 480px) {
+  .pro {
+    width: 100%; /* One item per row */
+  }
+}
