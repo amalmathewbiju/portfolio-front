@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'https://portfolio-back-p2mh.onrender.com';
 
   constructor(private http: HttpClient) { }
 
@@ -65,40 +65,40 @@ deleteContact(_id: number): Observable<any> {
   return this.http.delete<any>(`${this.apiUrl}/contacts/${_id}`);
 }
 getExperience(): Observable<any[]> {
-  return this.http.get<any[]>(`${this.apiUrl}/experience`);
+  return this.http.get<any[]>(`${this.apiUrl}/experiences`);
 }
 
 // Add a new project
 addExperience(experience: any): Observable<any> {
-  return this.http.post<any>(`${this.apiUrl}/experience`, experience);
+  return this.http.post<any>(`${this.apiUrl}/experiences`, experience);
 }
 // Correct delete experience function
 deleteExp(id: string): Observable<any> {
-  return this.http.delete<any>(`${this.apiUrl}/experience/${id}`);
+  return this.http.delete<any>(`${this.apiUrl}/experiences/${id}`);
 }
 
 // Correct update experience function
 updateExperience(experience: any): Observable<any> {
-  return this.http.put<any>(`${this.apiUrl}/experience/${experience._id}`, experience); 
+  return this.http.put<any>(`${this.apiUrl}/experiences/${experience._id}`, experience); 
 }
 
 
 getEducation(): Observable<any[]> {
-  return this.http.get<any[]>(`${this.apiUrl}/education`);
+  return this.http.get<any[]>(`${this.apiUrl}/educations`);
 }
 
 // Add a new project
 addEducation(education: any): Observable<any> {
-  return this.http.post<any>(`${this.apiUrl}/education`, education);
+  return this.http.post<any>(`${this.apiUrl}/educations`, education);
 }
 // Correct delete experience function
 deleteEdu(id: string): Observable<any> {
-  return this.http.delete<any>(`${this.apiUrl}/education/${id}`);
+  return this.http.delete<any>(`${this.apiUrl}/educations/${id}`);
 }
 
 // Correct update experience function
 updateEducation(education: any): Observable<any> {
-  return this.http.put<any>(`${this.apiUrl}/education/${education._id}`, education); // Use _id for MongoDB
+  return this.http.put<any>(`${this.apiUrl}/educations/${education._id}`, education); // Use _id for MongoDB
 }
 getMContacts(): Observable<any> {
   return this.http.get<any[]>(`${this.apiUrl}/mcontacts`);

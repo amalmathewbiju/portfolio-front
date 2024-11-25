@@ -11,6 +11,8 @@ import { DataService } from './data.service';
 import { TaskService } from './task.service';
 import { FooterComponent } from './footer/footer.component';
 import { ChatAssistantComponent } from './chat-assistant/chat-assistant.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @Component({
@@ -26,7 +28,7 @@ import { ChatAssistantComponent } from './chat-assistant/chat-assistant.componen
     ProjectsComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,LoadingComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
@@ -51,14 +53,14 @@ export class AppComponent implements OnInit {
   // }
 
   // Disable inspect shortcuts
-  @HostListener('document:keydown', ['$event'])
-  onKeyDown(event: KeyboardEvent) {
-    if (
-      event.key === 'F12' ||
-      (event.ctrlKey && event.shiftKey && ['I', 'J', 'C', 'K'].includes(event.key)) ||
-      (event.ctrlKey && event.key === 'U')
-    ) {
-      event.preventDefault();
-    }
-  }
+  // @HostListener('document:keydown', ['$event'])
+  // onKeyDown(event: KeyboardEvent) {
+  //   if (
+  //     event.key === 'F12' ||
+  //     (event.ctrlKey && event.shiftKey && ['I', 'J', 'C', 'K'].includes(event.key)) ||
+  //     (event.ctrlKey && event.key === 'U')
+  //   ) {
+  //     event.preventDefault();
+  //   }
+  // }
 }

@@ -79,11 +79,12 @@ span {
   padding: 1.5rem;
 }
 
-.education-content .content {
+.education-content .pro{
   padding: 1rem;
-  border: .2rem solid red;
+  border: .2rem solid rgb(255, 0, 0);
   border-radius: .6rem;
   margin-bottom: 1.5rem;
+  box-shadow: 0 3px 7px rgb(255, 0, 0);
   
 }
 

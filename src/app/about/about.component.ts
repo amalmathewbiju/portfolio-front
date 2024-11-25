@@ -12,8 +12,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 })
 export class AboutComponent implements OnInit {
   profile: any;
-  education:any;
-  experience : any;
+  educations:any;
+  experiences : any;
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -22,10 +22,10 @@ export class AboutComponent implements OnInit {
     });
     
     this.dataService.getExperience().subscribe((data) => {
-      this.experience = data;
+      this.experiences = data;
     });
     this.dataService.getEducation().subscribe((data)=> {
-      this.education = data;
+      this.educations = data;
 
     })
   }

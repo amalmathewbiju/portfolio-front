@@ -1,41 +1,3 @@
-/* .mainitem{
-    width: 100%;
-    margin-top: 100px;
-    color: rgba(25, 23, 23, 0.808);
-    font-size: 4rem;
-}
-.bodyitems{
-    justify-content: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgba(25, 23, 23, 0.808);
-    width: 100%;
-    height: 100%;
-    margin: 50px 0 0 40%;
-}
-.mainitem1{
-    font-family: monospace;
-    font-size: 2rem;
-    margin-left: 30%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.and{
-    margin-left: 45%;
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.mainitem2{
-    font-family: monospace;
-    font-size: 2rem;
-    margin-left: 40%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-.mainitem :hover{
-    
-    transition: 0.7s;
-   color: blueviolet;
-} */
-@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
 
 *{
     margin: 0;
@@ -91,6 +53,7 @@ span{
     cursor:pointer;
     transition:0.2s linear;
     border: 2px solid black;
+    
 }
 .home-img img:hover{
     font-size: 1.8rem;

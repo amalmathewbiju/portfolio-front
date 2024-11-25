@@ -18,7 +18,7 @@ import { filter } from 'rxjs';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit{
-  isDarkTheme = false;
+  isDarkTheme = true;
 
   constructor(private renderer: Renderer2) {}
 

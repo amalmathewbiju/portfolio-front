@@ -16,10 +16,9 @@
   gap: 20px;
 }
 
-.pro {
-  border: 1px solid rgb(255, 254, 254);
+.projects-container .pro {
   padding: 20px;
-  width: 30%;
+  width: 30%; /* Default width for larger screens */
   box-sizing: border-box;
   border-radius: 8px;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -40,14 +39,15 @@
 
 /* For tablets and smaller screens (768px and below) */
 @media (max-width: 768px) {
-  .pro {
-    width: 45%; /* Two items per row */
+  .projects-container .pro {
+      width: 45%; /* Two items per row */
   }
 }
 
 /* For mobile screens (480px and below) */
 @media (max-width: 480px) {
-  .pro {
-    width: 100%; /* One item per row */
+  .projects-container .pro {
+      width: 100%; /* One item per row */
   }
 }
+

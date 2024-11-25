@@ -1,70 +1,76 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-  }
-  a{
-    color: rgb(206, 8, 8);
-  }
-  html {
-    font-size: 62.5%;
-  }
-  
-  /* Light Theme (Default) */
-  body.light-theme label{
-    background-color: rgb(221, 216, 216);
-    color: rgb(0, 0, 0);
-   
-  }
-  body.light-theme  .chat-window{
-    border: 1px solid black;
-    background-color: rgb(255, 255, 255);
-  }
-  body.light-theme .pro, .chat-window{
-    border: 1px solid black;
-  }
-  /* Dark Theme */
-  body.dark-theme {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-  }
-  body.dark-theme p{
-    
-    color: rgb(255, 255, 255);
-  }
-  
-  /* Optional: Styling for the Toggle Button */
-  
-  
-html{
-    font-size: 62.5%;
-}
-body{
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
-}
-/* Light Theme */
-body.light-theme {
-  background-image: url("assets/images/light.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+body.dark-theme span,a{
+  color: rgb(0, 162, 255)
+}
+body.light-theme a{
+  color:red
+}
+body.light-theme{background-color: rgb(235, 229, 221);}
+
+
+/* Light Theme (Default) */
+body.light-theme label{
+  background-color: rgb(197, 184, 184);
+  color: rgb(0, 0, 0);
+ 
+}
+body.light-theme  .chat-window{
+  border: 1px solid black;
+  background-color: rgb(216, 211, 211);
+}
+body.light-theme .pro, .chat-window{
+  border: 1px solid black;
+}
+body.light-theme .projects-container .pro{
+  border: .2rem solid rgb(255, 0, 0);
+  border-radius: .6rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgb(255, 0, 0);
+}
 /* Dark Theme */
 body.dark-theme {
-  background-image: url("assets/images/dark.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
+
+body.dark-theme .education-box .education-content .pro,
+body.dark-theme .projects-container .pro,body.dark-theme .home-img img{
+  border: .2rem solid rgb(0, 162, 255);
+  border-radius: .6rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgb(7, 158, 246);
+}
+
+body.dark-theme p{
+  color: rgb(255, 255, 255);
+}
+
+body.dark-theme .education-row .education-column .education-box {
+  border-left: .3rem solid rgb(24, 165, 208);}
+
+
+
+html{
+  font-size: 62.5%;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
