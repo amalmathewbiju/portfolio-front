@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
   }
   redirectTo(contact: any) {
     if (contact.type === 'Email') {
-      window.location.href = `mailto:${contact.value}`;
+      window.location.href = `mailto: ${contact.value}`;
     } else if (contact.link) {
       // Check if the link has a proper URL format
       const url = contact.link.startsWith('http') ? contact.link : `https://${contact.link}`;

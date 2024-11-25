@@ -3,10 +3,10 @@ import { Routes } from '@angular/router';
 import { MorecontactsComponent } from './morecontacts/morecontacts.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '', pathMatch: 'full' },
  
   {
-    path: 'home',
+    path: '',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },

@@ -47,20 +47,20 @@ export class AppComponent implements OnInit {
   }
 
   // Disable right-click
-  // @HostListener('document:contextmenu', ['$event'])
-  // onRightClick(event: MouseEvent) {
-  //   event.preventDefault();
-  // }
+  @HostListener('document:contextmenu', ['$event'])
+  onRightClick(event: MouseEvent) {
+    event.preventDefault();
+  }
 
   // Disable inspect shortcuts
-  // @HostListener('document:keydown', ['$event'])
-  // onKeyDown(event: KeyboardEvent) {
-  //   if (
-  //     event.key === 'F12' ||
-  //     (event.ctrlKey && event.shiftKey && ['I', 'J', 'C', 'K'].includes(event.key)) ||
-  //     (event.ctrlKey && event.key === 'U')
-  //   ) {
-  //     event.preventDefault();
-  //   }
-  // }
+  @HostListener('document:keydown', ['$event'])
+  onKeyDown(event: KeyboardEvent) {
+    if (
+      event.key === 'F12' ||
+      (event.ctrlKey && event.shiftKey && ['I', 'J', 'C', 'K'].includes(event.key)) ||
+      (event.ctrlKey && event.key === 'U')
+    ) {
+      event.preventDefault();
+    }
+  }
 }
