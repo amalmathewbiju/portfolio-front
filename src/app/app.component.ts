@@ -37,10 +37,10 @@ export class AppComponent  {
   
 
   // Disable right-click
-  @HostListener('document:contextmenu', ['$event'])
-  onRightClick(event: MouseEvent) {
-    event.preventDefault();
-  }
+  // @HostListener('document:contextmenu', ['$event'])
+  // onRightClick(event: MouseEvent) {
+  //   event.preventDefault();
+  // }
 
   // Disable inspect shortcuts
   @HostListener('document:keydown', ['$event'])
