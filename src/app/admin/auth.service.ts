@@ -44,7 +44,7 @@ export class AuthService {
 
   private resetAutoLogoutTimer(): void {
     this.clearAutoLogoutTimer(); // Clear existing timer
-    this.startAutoLogoutTimer(); // Start a new timer
+    this.startAutoLogoutTimer(); 
   }
 
   private clearAutoLogoutTimer(): void {

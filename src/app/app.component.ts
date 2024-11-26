@@ -10,7 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { ChatAssistantComponent } from './chat-assistant/chat-assistant.component';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 import { LoadingComponent } from './loading/loading.component';
 
 

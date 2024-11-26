@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { RouterTestingModule } from '@angular/router/testing'; // For routing
-import { CommonModule } from '@angular/common'; // Import CommonModule if using Angular common directives
+import { RouterTestingModule } from '@angular/router/testing'; 
+import { CommonModule } from '@angular/common';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        AppComponent, // Include the standalone component
+        AppComponent,
         RouterTestingModule,
-        CommonModule // Add CommonModule if needed
+        CommonModule 
       ],
     }).compileComponents();
   });

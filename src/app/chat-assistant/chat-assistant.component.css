@@ -1,21 +1,4 @@
-/* .chat-window {
-  border: 1px solid #ddd;
-  padding: 10px;
-  width: 300px;
-  height: 200px;
- 
-}
-.user {
-  text-align: right;
-  color: blue;
-}
-.bot {
-  text-align: left;
-  color: green;
-} */
-/* Chat Icon Styling */
-/* Ensures the label is visible */
-/* Chat Icon Styling */
+
 .chat-icon {
     position: fixed;
     bottom: 20px;
